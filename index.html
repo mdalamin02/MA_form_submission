@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submission</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+
+    <header>
+      <div class="parent">
+        <div class="container">
+          <div class="header-top">
+            <div class="header-left">
+              <div class="header-number">
+                <i class="fa-solid fa-phone"></i>
+                <p class="top-header-number" style="color: white">
+                  +880 1750 020408
+                </p>
+              </div>
+              <span style="color: white">|</span>
+              <div>
+                <div class="header-number">
+                  <i class="fa-solid fa-envelope"></i>
+                  <p class="top-header-mail" style="color: white">
+                    contact@mediusware.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Primary Navbar -->
+
+            <div class="logo-image">
+              <svg
+                class="socia-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 8.04467C0 12.022 2.88867 15.3293 6.66667 16V10.222H4.66667V8H6.66667V6.222C6.66667 4.222 7.95533 3.11133 9.778 3.11133C10.3553 3.11133 10.978 3.2 11.5553 3.28867V5.33333H10.5333C9.55533 5.33333 9.33333 5.822 9.33333 6.44467V8H11.4667L11.1113 10.222H9.33333V16C13.1113 15.3293 16 12.0227 16 8.04467C16 3.62 12.4 0 8 0C3.6 0 0 3.62 0 8.04467Z"
+                  fill="white"
+                />
+              </svg>
+
+              <svg
+                class="socia-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 0C3.58214 0 0 3.58214 0 8C0 12.4179 3.58214 16 8 16C12.4179 16 16 12.4179 16 8C16 3.58214 12.4179 0 8 0ZM11.8446 6.03036C11.85 6.11429 11.85 6.20179 11.85 6.2875C11.85 8.90893 9.85357 11.9286 6.20536 11.9286C5.08036 11.9286 4.0375 11.6018 3.15893 11.0393C3.31964 11.0571 3.47321 11.0643 3.6375 11.0643C4.56607 11.0643 5.41964 10.75 6.1 10.2179C5.22857 10.2 4.49643 9.62857 4.24643 8.84286C4.55179 8.8875 4.82679 8.8875 5.14107 8.80714C4.69237 8.71598 4.28906 8.47229 3.99967 8.11747C3.71028 7.76265 3.55265 7.31858 3.55357 6.86071V6.83571C3.81607 6.98393 4.125 7.075 4.44821 7.0875C4.1765 6.90642 3.95368 6.66109 3.79948 6.37327C3.64529 6.08544 3.56451 5.76402 3.56429 5.4375C3.56429 5.06786 3.66071 4.73036 3.83393 4.4375C4.33197 5.0506 4.95345 5.55204 5.65797 5.90922C6.3625 6.26641 7.1343 6.47135 7.92321 6.51071C7.64286 5.1625 8.65 4.07143 9.86071 4.07143C10.4321 4.07143 10.9464 4.31071 11.3089 4.69643C11.7571 4.6125 12.1857 4.44464 12.5679 4.21964C12.4196 4.67857 12.1089 5.06607 11.6964 5.31071C12.0964 5.26786 12.4821 5.15714 12.8393 5.00179C12.5696 5.39821 12.2321 5.75 11.8446 6.03036Z"
+                  fill="white"
+                />
+              </svg>
+
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2C5.58167 2 2 5.58167 2 10C2 14.4183 5.58167 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58167 14.4183 2 10 2ZM8.04167 13.3158H6.42167V8.1025H8.04167V13.3158ZM7.22167 7.4625C6.71 7.4625 6.37917 7.1 6.37917 6.65167C6.37917 6.19417 6.72 5.8425 7.2425 5.8425C7.765 5.8425 8.085 6.19417 8.095 6.65167C8.095 7.1 7.765 7.4625 7.22167 7.4625ZM13.9583 13.3158H12.3383V10.4267C12.3383 9.75417 12.1033 9.2975 11.5175 9.2975C11.07 9.2975 10.8042 9.60667 10.6867 9.90417C10.6433 10.01 10.6325 10.16 10.6325 10.3092V13.315H9.01167V9.765C9.01167 9.11417 8.99083 8.57 8.96917 8.10167H10.3767L10.4508 8.82583H10.4833C10.6967 8.48583 11.2192 7.98417 12.0933 7.98417C13.1592 7.98417 13.9583 8.69833 13.9583 10.2333V13.3158Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="header-2">
+          <div>
+            <img class="logo" src="/Image/Logo.png" alt="med" />
+          </div>
+          <div class="toggle-button"><img src="/icon/nav.svg" alt="" /></div>
+          <nav class="nav-2">
+            <a href="">Home</a>
+            <a href="">Services</a>
+            <a href="">Projects</a>
+            <a href="">Why Mediusware</a>
+            <a href="">Blog</a>
+            <a href="">Career</a>
+            <a href="">Our Team</a>
+            <div class="call-button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.0497 6C15.0264 6.19057 15.924 6.66826 16.6277 7.37194C17.3314 8.07561 17.8091 8.97326 17.9997 9.95M14.0497 2C16.0789 2.22544 17.9713 3.13417 19.4159 4.57701C20.8606 6.01984 21.7717 7.91101 21.9997 9.94M10.2266 13.8631C9.02506 12.6615 8.07627 11.3028 7.38028 9.85323C7.32041 9.72854 7.29048 9.66619 7.26748 9.5873C7.18576 9.30695 7.24446 8.96269 7.41447 8.72526C7.46231 8.65845 7.51947 8.60129 7.63378 8.48698C7.98338 8.13737 8.15819 7.96257 8.27247 7.78679C8.70347 7.1239 8.70347 6.26932 8.27247 5.60643C8.15819 5.43065 7.98338 5.25585 7.63378 4.90624L7.43891 4.71137C6.90747 4.17993 6.64174 3.91421 6.35636 3.76987C5.7888 3.4828 5.11854 3.4828 4.55098 3.76987C4.2656 3.91421 3.99987 4.17993 3.46843 4.71137L3.3108 4.86901C2.78117 5.39863 2.51636 5.66344 2.31411 6.02348C2.08969 6.42298 1.92833 7.04347 1.9297 7.5017C1.93092 7.91464 2.01103 8.19687 2.17124 8.76131C3.03221 11.7947 4.65668 14.6571 7.04466 17.045C9.43264 19.433 12.295 21.0575 15.3284 21.9185C15.8928 22.0787 16.1751 22.1588 16.588 22.16C17.0462 22.1614 17.6667 22 18.0662 21.7756C18.4263 21.5733 18.6911 21.3085 19.2207 20.7789L19.3783 20.6213C19.9098 20.0898 20.1755 19.8241 20.3198 19.5387C20.6069 18.9712 20.6069 18.3009 20.3198 17.7333C20.1755 17.448 19.9098 17.1822 19.3783 16.6508L19.1835 16.4559C18.8339 16.1063 18.6591 15.9315 18.4833 15.8172C17.8204 15.3862 16.9658 15.3862 16.3029 15.8172C16.1271 15.9315 15.9523 16.1063 15.6027 16.4559C15.4884 16.5702 15.4313 16.6274 15.3644 16.6752C15.127 16.8453 14.7828 16.904 14.5024 16.8222C14.4235 16.7992 14.3612 16.7693 14.2365 16.7094C12.7869 16.0134 11.4282 15.0646 10.2266 13.8631Z"
+                  stroke="white"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a class="button-call" href="tel:+8801518936412">Book a Call</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-2">
+          <div class="hero-left">
+            <div class="hero-text-section">
+              <h1 class="hero-title">
+                Get In Touch with <br />
+                <span class="hero-title2">Us Today!</span>
+              </h1>
+
+              <!-- <h1>
+                Get In Touch with
+            </h1> -->
+              <p class="hero-paragraph">
+                Click the 'Schedule a Meeting' button and select a time that
+                works for you, and we'll be ready to talk! Excited to connect
+                with you in the near future!
+              </p>
+            </div>
+            <button class="button-schedule">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28 13.3334H4M21.3333 2.66669V8.00002M10.6667 2.66669V8.00002M10.4 29.3334H21.6C23.8402 29.3334 24.9603 29.3334 25.816 28.8974C26.5686 28.5139 27.1805 27.902 27.564 27.1493C28 26.2937 28 25.1736 28 22.9334V11.7334C28 9.49314 28 8.37304 27.564 7.51739C27.1805 6.76474 26.5686 6.15282 25.816 5.76933C24.9603 5.33335 23.8402 5.33335 21.6 5.33335H10.4C8.15979 5.33335 7.03969 5.33335 6.18404 5.76933C5.43139 6.15282 4.81947 6.76474 4.43597 7.51739C4 8.37304 4 9.49314 4 11.7334V22.9334C4 25.1736 4 26.2937 4.43597 27.1493C4.81947 27.902 5.43139 28.5139 6.18404 28.8974C7.03969 29.3334 8.15979 29.3334 10.4 29.3334Z"
+                  stroke="white"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Schedule a Meeting
+            </button>
+          </div>
+          <div>
+            <img class="hero-image" src="/Image/Hero-image.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Price  -->
+    <section class="container" style="width: 100%;">
+      <div class="project-main" >
+        <div  style="width: 70%;">
+          <form id="form" class="Project-left">
+            <h2 class="project-title">
+              Drop Us a <span style="color: #00a88e">Line</span>
+            </h2>
+            <div class="project-left-body">
+              <div class="project-div1">
+                <div class="input-form">
+                  <label for="name">Name*</label>
+                  <input
+                    required
+                    type="text"
+                    placeholder="Enter Your Name"
+                    class="project-form-name"
+                    id="name"
+                  />
+                </div>
+                <div class="input-form">
+                  <label for="email">Email*</label>
+                  <input
+                    required
+                    type="text"
+                    placeholder="Enter Your Email"
+                    class="project-form-name"
+                    id="email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="project-left-body">
+              <div class="project-div1">
+                <div class="input-form">
+                  <label for="phoneNumber"
+                    >Phone Number
+                    <span class="Optional">(Optional)</span></label
+                  >
+                  <input
+                    type="number"
+                    placeholder="Enter Your Phone Number"
+                    class="project-form-name"
+                    id="phoneNumber"
+                  />
+                </div>
+                <div class="input-form">
+                  <label for="companyName"
+                    >Company Name
+                    <span class="Optional">(Optional)</span></label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Enter Your Company Name"
+                    class="project-form-name"
+                    id="companyName"
+                  />
+                </div>
+              </div>
+              <div id="service" style="margin-top: 32px">
+                <label for="services"
+                  >Services You Need
+                  <span class="Optional">(You can choose multiple)</span></label
+                >
+                <div class="button-2">
+                  <input
+                    type="checkbox"
+                    id="service1"
+                    class="project-choice"
+                    value="Mobile Development"
+                    name="service_check"
+                  />
+                  <label for="service1" class="project-choice-label"
+                    >Mobile Development</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="service2"
+                    class="project-choice"
+                    value="Web Development"
+                    name="service_check"
+                  />
+                  <label for="service2" class="project-choice-label"
+                    >Web Development</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="service3"
+                    class="project-choice"
+                    value="SQA Solution"
+                    name="service_check"
+                  />
+                  <label for="service3" class="project-choice-label"
+                    >SQA Solution</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="service4"
+                    class="project-choice"
+                    value="Web UX/UI Design"
+                    name="service_check"
+                  />
+                  <label for="service4" class="project-choice-label"
+                    >Web UX/UI Design</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="service5"
+                    class="project-choice"
+                    value="API Integration"
+                    name="service_check"
+                  />
+                  <label for="service5" class="project-choice-label"
+                    >API Integration</label
+                  >
+                </div>
+                <div class="button-2">
+                  <input
+                    type="checkbox"
+                    id="service6"
+                    class="project-choice"
+                    value="Mobile UX/UI Design"
+                    name="service_check"
+                  />
+                  <label for="service6" class="project-choice-label"
+                    >Mobile UX/UI Design</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="service7"
+                    class="project-choice"
+                    value="Custom Service"
+                    name="service_check"
+                  />
+                  <label for="service7" class="project-choice-label"
+                    >Custom Service</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="service8"
+                    class="project-choice"
+                    value="Software Development"
+                    name="service_check"
+                  />
+                  <label for="service8" class="project-choice-label"
+                    >Software Development</label
+                  >
+                </div>
+              </div>
+              <div style="margin-top: 32px">
+                <label for="budget"
+                  >Budget
+                  <span class="Optional">(You can choose one)</span></label
+                >
+                <div class="button-2">
+                  <input
+                    type="radio"
+                    id="budget1"
+                    name="budget"
+                    class="project-choice"
+                    value="Less than $500"
+                  />
+                  <label for="budget1" class="project-choice-label"
+                    >Less than $500</label
+                  >
+                  <input
+                    type="radio"
+                    id="budget2"
+                    name="budget"
+                    class="project-choice"
+                    value="$500 - $1000"
+                  />
+                  <label for="budget2" class="project-choice-label"
+                    >$500 - $1000</label
+                  >
+                  <input
+                    type="radio"
+                    id="budget3"
+                    name="budget"
+                    class="project-choice"
+                    value="$1001 - $1500"
+                  />
+                  <label for="budget3" class="project-choice-label"
+                    >$1001 - $1500</label
+                  >
+                  <input
+                    type="radio"
+                    id="budget4"
+                    name="budget"
+                    class="project-choice"
+                    value="$1500 - $2000"
+                  />
+                  <label for="budget4" class="project-choice-label"
+                    >$1500 - $2000</label
+                  >
+                </div>
+              </div>
+              <div style="margin-top: 32px">
+                <label for="textArea"
+                  >Deep Details About Your Query
+                  <span class="Optional">(Optional)</span></label
+                >
+                <div class="textarea">
+                  <textarea
+                    name="text"
+                    id="textArea"
+                    placeholder="Tell us more about your query"
+                  ></textarea>
+                </div>
+              </div>
+              <div style="margin-top: 32px">
+                <label for="file-upload"
+                  >Add Attachments<span class="Optional"
+                    >(Optional)</span
+                  ></label
+                >
+                <div class="textarea-2">
+                  <span class="truncate" style="font-size: 16px; color: #667085"
+                    >(a brief, idea, branding guideline, old design,...)</span
+                  >
+                  <input id="file-upload" type="file" hidden />
+                  <label
+                    for="file-upload"
+                    class="attach-file"
+                    style="
+                      cursor: pointer;
+                      display: flex;
+                      align-items: center;
+                      margin-top: 8px;
+                    "
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="margin-right: 8px"
+                    >
+                      <path
+                        d="M14.1016 7.26634L8.09121 13.2768C6.72437 14.6436 4.50829 14.6436 3.14146 13.2768C1.77462 11.9099 1.77462 9.69384 3.14146 8.327L9.15187 2.3166C10.0631 1.40537 11.5405 1.40537 12.4517 2.3166C13.3629 3.22782 13.3629 4.7052 12.4517 5.61643L6.67699 11.3911C6.22138 11.8467 5.48269 11.8467 5.02708 11.3911C4.57147 10.9355 4.57147 10.1968 5.02708 9.74122L10.0947 4.67362"
+                        stroke="white"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Add File (5Mb)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="SendInquiry" id="submit">
+                Send Inquiry
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.50043 10H4.00043M3.91577 10.2915L1.58085 17.2662C1.39742 17.8142 1.3057 18.0881 1.37152 18.2569C1.42868 18.4034 1.55144 18.5145 1.70292 18.5567C1.87736 18.6054 2.14083 18.4869 2.66776 18.2497L19.3792 10.7296C19.8936 10.4981 20.1507 10.3824 20.2302 10.2216C20.2993 10.082 20.2993 9.9181 20.2302 9.77843C20.1507 9.61767 19.8936 9.50195 19.3792 9.2705L2.66193 1.74776C2.13659 1.51135 1.87392 1.39315 1.69966 1.44164C1.54832 1.48375 1.42556 1.59454 1.36821 1.74078C1.30216 1.90917 1.3929 2.18255 1.57437 2.72931L3.91642 9.78556C3.94759 9.87947 3.96317 9.92642 3.96933 9.97444C3.97479 10.0171 3.97473 10.0602 3.96916 10.1028C3.96289 10.1508 3.94718 10.1977 3.91577 10.2915Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="overlay" id="overlay"></div>
+
+          <div class="popup" id="popup">
+            <h2>Submitted Data</h2>
+            <p id="submittedName"></p>
+            <p id="submittedEmail"></p>
+            <p id="submittedPhone"></p>
+            <p id="submittedCompany"></p>
+            <p id="submittedServices"></p>
+            <p id="submittedBudget"></p>
+            <p id="submittedDetails"></p>
+            <img id="submittedImage" src="" alt="Image Preview" />
+            <span id="closePopup" onclick="closeModal()">Close</span>
+          </div>
+        </div>
+        <!-- Contact Side -->
+        <div class="Project-right">
+          <div>
+            <div>
+              <h2 class="Project-right-contact">
+                Contact <span style="color: #00a88e">Details</span>
+              </h2>
+              <div class="Project-right-div1">
+                <p style="color: #333333; font-size: 18px; font-weight: 700">
+                  Bangladesh Address
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-top: 32px;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <img src="/icon/Location.svg" alt="" />
+                    <p style="font-size: 16px">
+                      18/5 Ring Road, Mohammadpur, Dhaka
+                    </p>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <img src="/icon/carbon_phone-voice-filled.svg" alt="" />
+                    <p style="font-size: 16px">+8801750020408</p>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <img src="/icon/Message.svg" alt="" />
+                    <p style="font-size: 16px">career@mediusware.com</p>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <img src="/icon/clock.svg" alt="" />
+                    <p style="font-size: 16px">
+                      Monday to Friday: 12 PM - 9 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Project-right-div1">
+              <p style="color: #333333; font-size: 18px; font-weight: 700">
+                USA Address
+              </p>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  margin-top: 32px;
+                "
+              >
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <img src="/icon/Location.svg" alt="" />
+                  <p style="font-size: 16px">
+                    1903 commonwealth st, Houston tx 77006
+                  </p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <img src="/icon/carbon_phone-voice-filled.svg" alt="" />
+                  <p style="font-size: 16px">+1 (978) 431-0122</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <img src="/icon/Message.svg" alt="" />
+                  <p style="font-size: 16px">career@mediusware.com</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <img src="/icon/clock.svg" alt="" />
+                  <p style="font-size: 16px">Monday to Friday: 12 PM - 9 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="Project-right-contact">
+            Company <span style="color: #00a88e">Deck</span>
+          </h2>
+
+          <button
+            style="
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+              color: #0060af;
+              padding: 12px 24px 12px 24px;
+              background-color: #e6eff7;
+              border-radius: 12px;
+              border: 1px solid #0060af;
+              margin-top: 32px;
+              gap: 5px;
+            "
+          >
+            Company Profile<img
+              src="/icon/download-01.svg"
+              alt=""
+              style="width: 24px; height: 24px"
+            />
+          </button>
+          <h2
+            class="Project-right-contact"
+            style="margin-top: 32px; margin-bottom: 32px"
+          >
+            Follow <span style="color: #00a88e">Us</span>
+          </h2>
+          <div style="display: flex; gap: 24px">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.55016 21.75C16.6045 21.75 21.5583 14.2468 21.5583 7.74192C21.5583 7.53098 21.5536 7.31536 21.5442 7.10442C22.5079 6.40752 23.3395 5.54432 24 4.55536C23.1025 4.95466 22.1496 5.21544 21.1739 5.3288C22.2013 4.71297 22.9705 3.74553 23.3391 2.60583C22.3726 3.17862 21.3156 3.58267 20.2134 3.80067C19.4708 3.01162 18.489 2.48918 17.4197 2.31411C16.3504 2.13905 15.2532 2.32111 14.2977 2.83216C13.3423 3.3432 12.5818 4.15477 12.1338 5.14137C11.6859 6.12798 11.5754 7.23468 11.8195 8.29036C9.86249 8.19215 7.94794 7.68377 6.19998 6.79816C4.45203 5.91255 2.90969 4.6695 1.67297 3.14958C1.0444 4.2333 0.852057 5.51571 1.13503 6.73615C1.418 7.9566 2.15506 9.02351 3.19641 9.72005C2.41463 9.69523 1.64998 9.48474 0.965625 9.10598V9.16692C0.964925 10.3042 1.3581 11.4066 2.07831 12.2868C2.79852 13.167 3.80132 13.7706 4.91625 13.995C4.19206 14.1932 3.43198 14.2221 2.69484 14.0794C3.00945 15.0575 3.62157 15.913 4.44577 16.5264C5.26997 17.1398 6.26512 17.4807 7.29234 17.5013C5.54842 18.8712 3.39417 19.6142 1.17656 19.6107C0.783287 19.6101 0.390399 19.586 0 19.5385C2.25286 20.9838 4.87353 21.7514 7.55016 21.75Z"
+                fill="#333333"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2_1116)">
+                <path
+                  d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
+                  fill="#333333"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2_1116">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2_1117)">
+                <path
+                  d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                  fill="#333333"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2_1117">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 0C5.37527 0 0 5.37527 0 12C0 18.6248 5.37527 24 12 24C18.6117 24 24 18.6248 24 12C24 5.37527 18.6117 0 12 0ZM19.9262 5.53145C21.3579 7.27549 22.217 9.50107 22.243 11.9089C21.9046 11.8439 18.5206 11.154 15.1106 11.5835C15.0325 11.4143 14.9675 11.2321 14.8894 11.0499C14.6811 10.5554 14.4469 10.0477 14.2126 9.56618C17.9869 8.0304 19.705 5.81779 19.9262 5.53145ZM12 1.77007C14.603 1.77007 16.9848 2.74621 18.7939 4.34707C18.6117 4.60738 17.0629 6.67679 13.4186 8.04338C11.7397 4.95878 9.87855 2.43384 9.5922 2.04338C10.3601 1.86117 11.1671 1.77007 12 1.77007ZM7.63995 2.73319C7.91325 3.09761 9.73538 5.63558 11.4404 8.65508C6.65076 9.9306 2.42083 9.90458 1.96529 9.90458C2.62907 6.72885 4.77657 4.08676 7.63995 2.73319ZM1.74404 12.0131C1.74404 11.9089 1.74404 11.8048 1.74404 11.7007C2.18655 11.7136 7.15835 11.7787 12.2733 10.243C12.5727 10.8156 12.846 11.4013 13.1063 11.9869C12.9761 12.026 12.8329 12.0651 12.7028 12.1041C7.41865 13.8091 4.60738 18.4685 4.3731 18.859C2.7462 17.0499 1.74404 14.6421 1.74404 12.0131ZM12 22.256C9.6312 22.256 7.44469 21.449 5.71367 20.0954C5.89588 19.718 7.97827 15.7094 13.757 13.692C13.783 13.679 13.7961 13.679 13.8221 13.666C15.2668 17.4013 15.8525 20.5379 16.0087 21.436C14.7722 21.9696 13.4186 22.256 12 22.256ZM17.7136 20.4989C17.6096 19.8742 17.0629 16.8807 15.7223 13.1974C18.9371 12.6898 21.7484 13.5228 22.0998 13.6399C21.6573 16.4902 20.0173 18.9501 17.7136 20.4989Z"
+                fill="#333333"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Location -->
+    <section
+      class="Location-media"
+      style="
+        background-color: #f5f9fc;
+        padding-bottom: 96px;
+        background-color: #f5f9fc;
+      "
+    >
+      <div class="Location">
+        <iframe
+          class="iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.2659123829603!2d90.35965407533666!3d23.773543478654556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0a4c3c2f0e7%3A0xb2bf6d2980763c80!2s18%2C%205%20Ring%20Rd%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1719993319563!5m2!1sen!2sbd"
+          width="836"
+          height="342"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe
+        ><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.944175110105!2d-95.40052462445747!3d29.75032877507297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c0a1be5dd0b5%3A0x8d962634f0cc573c!2s1903%20Commonwealth%20St%2C%20Houston%2C%20TX%2077006%2C%20USA!5e0!3m2!1sen!2sbd!4v1719993349763!5m2!1sen!2sbd"
+          width="836"
+          height="342"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer-bg">
+      <div class="footer-container">
+        <div
+          class="footer-media"
+          style="
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 24px;
+          "
+        >
+          <div>
+            <img class="hidden-media" src="/Icon/Group.png" alt="" />
+            <p
+              style="
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+                margin-top: 24px;
+                margin-bottom: 24px;
+              "
+            >
+              We shape the art of <br />
+              technology
+            </p>
+            <div class="footer-social-media">
+              <img src="/img/fb-dark.png" alt="" /><img
+                src="/img/linkedin-dark.png"
+                alt=""
+              /><img src="/img/x-dark.png" alt="" />
+              <img src="/img/yt-dark.png" alt="" />
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size: 18px; font-weight: 700; margin-bottom: 12px">
+              Company
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div><a href="">Services</a></div>
+              <div><a href="">About Us</a></div>
+              <div><a href="">FAQs</a></div>
+              <div><a href="">Services</a></div>
+            </div>
+          </div>
+          <div>
+            <p style="font-size: 18px; font-weight: 700; margin-bottom: 12px">
+              Services
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div><a href="">Software Development </a></div>
+              <div><a href="">UI/UX Design & Dev</a></div>
+              <div><a href="">Web Development</a></div>
+              <div><a href="">Web Development</a></div>
+              <div><a href="">API Integration</a></div>
+              <div><a href="">Mobile App Design</a></div>
+              <div><a href="">E commerce Solutions</a></div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p style="font-size: 18px; font-weight: 700; margin-bottom: 12px">
+                Bangladesh Address
+              </p>
+              <div
+                style="
+                  display: flex;
+                  align-items: start;
+                  flex-direction: column;
+                  gap: 12px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/map-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    <span class="footer-address1">
+                      18/5 Ring Road,
+                      <span class="footer-address"> Mohammadpur, Dhaka</span>
+                    </span>
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/Message-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    18/5 career@mediusware.com
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/call-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    +8801750020408
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/clock-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    18/5 Monday to Friday: 12 PM - <br />
+                    9 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p style="font-size: 18px; font-weight: 700; margin-bottom: 12px">
+                USA Address
+              </p>
+              <div
+                style="
+                  display: flex;
+                  align-items: start;
+                  flex-direction: column;
+                  gap: 12px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/map-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    18/5 1903 commonwealth st,<span class="line-break"></span
+                    >Houston tx 77006
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/Message-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    career@mediusware.com
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/call-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    +1 (978) 431-0122
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    gap: 12px;
+                  "
+                >
+                  <img src="/img/clock-dark.png" alt="" />
+                  <p
+                    style="
+                      font-size: 16px;
+                      color: #eaecf0;
+                      font-weight: 450;
+                      line-height: 24px;
+                    "
+                  >
+                    18/5 Monday to Friday: 12 PM - <br />
+                    9 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p style="text-align: center">© 2023 Mediusware. All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
